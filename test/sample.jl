@@ -80,6 +80,10 @@ end
 
 w = [2., 5., 3.]
 n = 10^5
+
+single = wsample([10,20,30], w)
+@test single == 10 || single == 20 || single == 30
+
 x = wsample([10,20,30], w, n)
 
 h = [sum(x .== 10), sum(x .== 20), sum(x .== 30)]
